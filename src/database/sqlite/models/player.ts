@@ -13,14 +13,14 @@ class Player
   public age!: number;
   public squad_number!: number;
   public position!: "Ataque" | "Medio" | "Defensa" | "Volante";
-  public nacionality!: string;
+  public nationality!: string;
 
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
   public readonly deletedAt!: Date;
   
   static associate(models:any){
-    Player.belongsTo(models.Teams)
+    this.belongsTo(models.Teams)
   }
 }
 
@@ -40,14 +40,14 @@ Player.init(
       allowNull: false,
     },
     squad_number: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     position: {
       type: DataTypes.ENUM("Ataque", "Defensa", "Volante", "Medio"),
       allowNull: false,
     },
-    nacionality: {
+    nationality: {
       type: DataTypes.STRING,
       allowNull: false,
     },
