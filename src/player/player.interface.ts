@@ -7,5 +7,5 @@ export interface PlayerAttributes{
     age:number,
     squad_number:number,
     position: 'Ataque' | 'Medio' | 'Defensa' | 'Volante',
-    nacionality: string
+    nationality: string
 }
